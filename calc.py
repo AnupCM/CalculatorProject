@@ -1,10 +1,10 @@
-# Define our function
-def welcome():
+# Define function
+def intro():
     print('''
 Welcome to Calculator
 ''')
 
-def calculate():
+def calculator():
     operation = input('''
 Please type in the math operation you would like to complete:
 + for addition
@@ -46,11 +46,11 @@ Please type in the math operation you would like to complete:
         print('You have not typed a valid operator, please run the program again.')
 
     # Add again() function to calculate() function
-    again()
+    onceagain()
 
 
 # Define again() function to ask user if they want to use the calculator again
-def again():
+def onceagain():
 
     # Take input from user
     calc_again = input('''
@@ -60,7 +60,7 @@ Please type Y for YES or N for NO.
 
     # If user types Y, run the calculate() function
     if calc_again.upper() == 'Y':
-        calculate()
+        calculator()
 
     # If user types N, say good-bye to the user and end the program
     elif calc_again.upper() == 'N':
@@ -68,8 +68,8 @@ Please type Y for YES or N for NO.
 
     # If user types another key, run the function again
     else:
-        again()
+        onceagain()
 
 # Call calculate() outside of the function
-welcome()
-calculate()
+intro()
+calculator()
